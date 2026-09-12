@@ -1,23 +1,26 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
-
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
 
-  server: {
-    port: 7180,
-    host: "192.168.0.121",
-  },
+  return {
+    plugins: [
+      react(),
+      tailwindcss(),
+    ],
 
-  resolve: {
-    alias: {
-      "@": "/src",
+    server: {
+      port: Number(env.VITE_DEV_SERVER_PORT) || 7180,
+      host: env.VITE_DEV_SERVER_HOST || 'localhost',
+    },
+
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
     },
   }
 })
