@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
     ],
 
     server: {
-      port: Number(env.VITE_DEV_SERVER_PORT) || 7180,
+      port: Number(env.VITE_DEV_SERVER_PORT),
       host: env.VITE_DEV_SERVER_HOST || 'localhost',
     },
 
