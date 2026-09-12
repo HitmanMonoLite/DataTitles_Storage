@@ -1,4 +1,4 @@
-## 🛠 Tech Stack & Dependencies
+## Tech Stack & Dependencies
 
 This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency management. Below is the breakdown of the libraries used, including exact versions locked in `poetry.lock`.
 
@@ -45,16 +45,33 @@ This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency managem
 - **idna** `3.11` — Internationalized Domain Names in Applications.
 - **dnspython** `2.8.0` — DNS toolkit (required by email-validator).
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
-├── AuthUser/             # Authentication and user logic
-├── DataBase_Logic/       # Database connection and queries
-├── models/               # Database models
-├── SessionDataBase/      # Session management
-├── .env                  # Environment variables (not committed)
-├── config.py             # Application configuration
-├── main.py               # Application entry point
-├── poetry.lock           # Locked dependencies (committed)
-├── pyproject.toml        # Project dependencies and metadata
-└── README.md
+global_info_storage/
+├── Backend/                   # Python FastAPI backend
+│   ├── AuthUser/              # Authentication & user logic (cookies, CRUD, views)
+│   ├── DataBase_Logic/        # Database connection & queries
+│   ├── models/                # Pydantic models
+│   ├── SessionDataBase/       # Redis session management
+│   ├── .env                   # Backend env variables (not committed)
+│   ├── config.py              # Backend configuration
+│   ├── main.py                # FastAPI application entry point
+│   ├── poetry.lock            # Locked backend dependencies
+│   └── pyproject.toml         # Backend dependencies & metadata
+│
+├── Frontend/                  # React + Vite frontend
+│   ├── src/                   # Frontend source code
+│   │   ├── api/               # API requests (axios, auth)
+│   │   ├── components/        # React components (panels, providers)
+│   │   ├── context/           # React contexts (Auth, Theme)
+│   │   ├── App.jsx            # Main App component
+│   │   └── main.jsx           # React entry point
+│   ├── .env                   # Frontend env variables (not committed)
+│   ├── package.json           # Frontend dependencies
+│   ├── package-lock.json      # Locked frontend dependencies
+│   └── vite.config.js         # Vite configuration
+│
+├── .env.example               # Template for environment variables
+├── .gitignore                 # Git ignore rules
+└── README.md                  # Project documentation
