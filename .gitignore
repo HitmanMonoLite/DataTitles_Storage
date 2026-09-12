@@ -1,0 +1,26 @@
+# sicrets
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+
+# PyCash
+__pycache__/
+*.py[cod]
+*$py.class
+
+# LocalDB
+*.sqlite3
+*.db
+
+# IDE & OS
+.vscode/
+.idea/
+*.iml
+*.iws
+.DS_Store
+
+# more
+*.log

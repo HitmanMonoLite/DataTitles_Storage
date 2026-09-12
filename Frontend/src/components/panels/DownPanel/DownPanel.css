@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.custom-segmented {
+  background-color: var(--seg-bg);
+}
+
+.custom-segmented .ant-segmented-item {
+  color: var(--seg-color);
+}
+
+.custom-segmented .ant-segmented-item-selected {
+  background-color: var(--seg-selected-bg);
+  color: var(--seg-selected-color);
+}
+
+.custom-segmented .ant-segmented-thumb {
+  background-color: var(--ant-primary-color) !important;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.custom-segmented .ant-segmented-item:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--seg-color) !important;
+} 
+
+.custom-segmented .ant-segmented-item-selected:hover {
+  background-color: var(--seg-color);
+  color: var(--seg-bg) !important;
+}

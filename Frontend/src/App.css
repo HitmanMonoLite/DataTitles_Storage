@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*Buttons*/
+
+.custom-button {
+  border: 1px dashed #1677ff;
+  background-color: var(--button-bg);
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff !important;
+}
+
+.custom-button:hover {
+  border: 1px #1677ff;
+  background-color: #1677ff !important;
+  color: #000 !important;
+}
+
+/*Notification*/
+
+.ant-notification {
+  inset-block-start: 75px !important;   /* top: 145px */
+}
+
+.ant-notification-notice-close {
+  color: #ffffff !important;
+}
+
+.ant-notification-notice-close:hover {
+  color: #ffffff !important;
+}

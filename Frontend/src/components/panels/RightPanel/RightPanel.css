@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.custom-dropdown-menu {
+  background-color: var(--menu-bg) !important;
+  color: var(--menu-color) !important;
+  border-radius: 12px;
+}
+
+.custom-dropdown-menu .ant-dropdown-menu-item:nth-child(1) {
+  background-color: var(--menu-bg) !important;
+  color: var(--menu-color) !important;
+}
+
+.custom-dropdown-menu .ant-dropdown-menu-item:nth-child(1):hover {
+  background-color: var(--menu-selected-bg) !important;
+  color: var(--menu-color) !important;
+}

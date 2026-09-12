@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "global-info-storage"
+version = "0.1.0"
+description = ""
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.128.0"
+uvicorn = {extras = ["standard"], version = "^0.40.0"}
+psycopg2 = {extras = ["2-9-10"], version = "^2.9.11"}
+pydantic = {extras = ["email"], version = "^2.12.5"}
+user-agents = "^2.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^9.0.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
