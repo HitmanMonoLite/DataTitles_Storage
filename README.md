@@ -1,6 +1,6 @@
 ## Tech Stack & Dependencies
 
-This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency management. Below is the breakdown of the libraries used, including exact versions locked in `poetry.lock`.
+This project uses **Python `^3.11`** and **Poetry** for dependency management. Below is the breakdown of the libraries used, including exact versions locked in `poetry.lock`.
 
 ### Core Framework & ASGI
 - **fastapi** `0.128.0`
@@ -12,12 +12,13 @@ This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency managem
 ### Data Validation & Settings
 - **pydantic** `2.12.5` (with `email` extras)
 - **pydantic-core** `2.41.5`
+- **pydantic-settings** `2.15.0`
 - **email-validator** `2.3.0`
 - **python-dotenv** `1.2.1`
-- **pyyaml** `6.0.3`
 
-### Database
-- **psycopg2** `2.9.11`
+### Database & Cache
+- **asyncpg** `0.31.0`
+- **redis** `8.1.0`
 
 ### Utilities & Parsing
 - **user-agents** `2.2.0`
@@ -26,7 +27,7 @@ This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency managem
 - **typing-extensions** `4.15.0`
 - **typing-inspection** `0.4.2`
 
-### Performance & Server Extras (Uvicorn standard)
+### Server Performance Extras (from `uvicorn[standard]`)
 - **uvloop** `0.22.1`
 - **httptools** `0.7.1`
 - **watchfiles** `1.1.1`
@@ -41,9 +42,12 @@ This project uses **Python `^3.11`** and **Poetry 2.3.1** for dependency managem
 - **pluggy** `1.6.0`
 - **pygments** `2.19.2`
 
-### Networking & Misc
+### Networking & Transitive Dependencies
 - **idna** `3.11`
 - **dnspython** `2.8.0`
+- **pyyaml** `6.0.3`
+- **annotated-doc** `0.0.4`
+- **annotated-types** `0.7.0`
 
 ## Project Structure
 
